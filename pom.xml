@@ -7,7 +7,7 @@
 
   <packaging>jar</packaging>
   <name>Activiti Cloud :: Audit with MongoDB</name>
-
+ 
   <properties>
     <version.activiti.cloud>${project.version}</version.activiti.cloud>
 
