@@ -3,7 +3,7 @@
 
   <groupId>org.activiti.cloud</groupId>
   <artifactId>activiti-cloud-audit-mongodb</artifactId>
-  <version>7-201711-EA</version>
+  <version>7-201712-EA</version>
 
   <packaging>jar</packaging>
   <name>Activiti Cloud :: Audit with MongoDB</name>
@@ -11,7 +11,7 @@
   <properties>
     <version.activiti.cloud>${project.version}</version.activiti.cloud>
 
-    <spring-boot-maven-plugin.version>2.0.0.M6</spring-boot-maven-plugin.version>
+    <spring-boot-maven-plugin.version>2.0.0.M7</spring-boot-maven-plugin.version>
     <docker.maven.plugin.version>0.21.0</docker.maven.plugin.version>
     <jgitflow.plugin.version>1.0-m5.1</jgitflow.plugin.version>
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
@@ -151,7 +151,7 @@
                 <assembly>
                   <descriptorRef>artifact</descriptorRef>
                 </assembly>
-                <cmd>java -jar maven/${project.artifactId}-${project.version}.jar</cmd>
+                <cmd>java ${JAVA_OPTS} -jar maven/${project.artifactId}-${project.version}.jar</cmd>
               </build>
             </image>
           </images>
