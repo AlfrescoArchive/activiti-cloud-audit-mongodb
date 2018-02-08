@@ -6,6 +6,8 @@
 [![ASL 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/Activiti/activiti-cloud-audit-mongodb/blob/master/LICENSE.txt)  [![CLA](https://cla-assistant.io/readme/badge/Activiti/activiti-cloud-audit-mongodb)](https://cla-assistant.io/Activiti/activiti-cloud-audit-mongodb)
 [![Docker Build Status](https://img.shields.io/docker/build/activiti/activiti-cloud-audit-mongodb.svg)](https://hub.docker.com/r/activiti/activiti-cloud-audit-mongodb)
 [![Known Vulnerabilities](https://snyk.io/test/github/Activiti/activiti-cloud-audit-mongodb/badge.svg)](https://snyk.io/test/github/Activiti/activiti-cloud-audit-mongodb)
+[![security status](https://www.meterian.com/badge/gh/Activiti/activiti-cloud-audit-mongodb/security)](https://www.meterian.com/report/gh/Activiti/activiti-cloud-audit-mongodb)
+[![stability status](https://www.meterian.com/badge/gh/Activiti/activiti-cloud-audit-mongodb/stability)](https://www.meterian.com/report/gh/Activiti/activiti-cloud-audit-mongodb)
 
 Activiti Cloud Audit Service MongoDB Implementation. This service uses MongoDB Database to store events emitted by Runtime Bundles as they come in as JSON Documents.
 
