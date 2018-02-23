@@ -1,35 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>org.activiti.cloud</groupId>
   <artifactId>activiti-cloud-audit-mongodb</artifactId>
   <version>7-201802-EA-SNAPSHOT</version>
-
-  <packaging>jar</packaging>
   <name>Activiti Cloud :: Audit with MongoDB</name>
- 
+  <description>${project.name}</description>
   <properties>
-    <version.activiti.cloud>7-201802-EA-SNAPSHOT</version.activiti.cloud>
-
-    <spring-boot-maven-plugin.version>2.0.0.M7</spring-boot-maven-plugin.version>
-    <docker.maven.plugin.version>0.21.0</docker.maven.plugin.version>
-    <jgitflow.plugin.version>1.0-m5.1</jgitflow.plugin.version>
+    <activiti-cloud.version>7-201802-EA-SNAPSHOT</activiti-cloud.version>
+    <spring-boot-maven-plugin.version>2.0.0.RC1</spring-boot-maven-plugin.version>
+    <docker-maven-plugin.version>0.21.0</docker-maven-plugin.version>
+    <jgitflow-maven-plugin.version>1.0-m5.1</jgitflow-maven-plugin.version>
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
   </properties>
-
-
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.activiti.cloud</groupId>
         <artifactId>activiti-cloud-dependencies</artifactId>
-        <version>${version.activiti.cloud}</version>
+        <version>${activiti-cloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>org.activiti.cloud</groupId>
@@ -51,7 +46,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <repositories>
     <repository>
       <id>spring-milestones</id>
@@ -67,7 +61,7 @@
     <repository> <!-- Using snapshot repo to temporarily keep keycloak adapter -->
       <id>activiti-snapshots</id>
       <name>Activiti Snapshots</name>
-      <url>https://artifacts.alfresco.com/nexus/content/repositories/activiti-snapshots/</url>
+      <url>https://artifacts.alfresco.com/nexus/content/repositories/activiti-snapshots</url>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -84,7 +78,6 @@
       </snapshots>
     </repository>
   </repositories>
-
   <pluginRepositories>
     <pluginRepository>
       <id>spring-snapshots</id>
@@ -103,8 +96,6 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-
-
   <build>
     <plugins>
       <plugin>
@@ -122,16 +113,15 @@
       <plugin>
         <groupId>external.atlassian.jgitflow</groupId>
         <artifactId>jgitflow-maven-plugin</artifactId>
-        <version>${jgitflow.plugin.version}</version>
+        <version>${jgitflow-maven-plugin.version}</version>
         <configuration>
           <enableFeatureVersions>true</enableFeatureVersions>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <allowSnapshots>true</allowSnapshots>
           <noDeploy>true</noDeploy>
-          <useReleaseProfile>true</useReleaseProfile> <!-- Do not generate javadoc when releaseing -->
+          <useReleaseProfile>true</useReleaseProfile> <!-- Do not generate javadoc when releasing -->
           <pushReleases>true</pushReleases>
           <squash>false</squash>
-          <versionTagPrefix>activiti-</versionTagPrefix>
           <keepBranch>true</keepBranch>
           <noFeatureBuild>true</noFeatureBuild>
           <noFeatureMerge>true</noFeatureMerge>
@@ -168,40 +158,39 @@
       </plugin>
     </plugins>
   </build>
-
   <profiles>
-  <!-- Profile to sign artifacts, triggered when releasing -->
-  <profile>
-    <id>sign</id>
-    <build>
-      <plugins>
-        <plugin>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>${maven-gpg-plugin.version}</version>
-          <executions>
-            <execution>
-              <id>sign-artifacts</id>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </build>
-  </profile>
+    <!-- Profile to sign artifacts, triggered when releasing -->
+    <profile>
+      <id>sign</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven-gpg-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
-
   <distributionManagement>
     <repository>
       <id>activiti-enterprise-snapshots</id>
       <name>Alfresco internal repo</name>
-      <url>https://artifacts.alfresco.com/nexus/content/repositories/activiti-releases/</url>
+      <url>https://artifacts.alfresco.com/nexus/content/repositories/activiti-releases</url>
     </repository>
     <snapshotRepository>
       <id>activiti-enterprise-snapshots</id>
       <name>Activiti Snapshots</name>
-      <url>https://artifacts.alfresco.com/nexus/content/repositories/activiti-snapshots/</url>
+      <url>https://artifacts.alfresco.com/nexus/content/repositories/activiti-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -225,12 +214,12 @@
   </issueManagement>
   <ciManagement>
     <system>Travis</system>
-    <url>http://bamboo.ci.codehaus.org/browse/ACT</url>
+    <url>https://travis-ci.com/Activiti/activiti-cloud-audit-mongodb</url>
   </ciManagement>
   <scm>
-    <url>https://github.com/Activiti/activiti-cloud-audit</url>
-    <connection>scm:git:https://github.com/Activiti/activiti-cloud-audit.git</connection>
-    <developerConnection>scm:git:https://github.com/Activiti/activiti-cloud-audit.git</developerConnection>
+    <url>https://github.com/Activiti/activiti-cloud-audit-mongodb</url>
+    <connection>scm:git:https://github.com/Activiti/activiti-cloud-audit-mongodb.git</connection>
+    <developerConnection>scm:git:https://github.com/Activiti/activiti-cloud-audit-mongodb.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   <developers>
@@ -256,5 +245,4 @@
       <organizationUrl>http://alfresco.com</organizationUrl>
     </developer>
   </developers>
-
 </project>
