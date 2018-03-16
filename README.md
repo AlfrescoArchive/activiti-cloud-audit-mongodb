@@ -1,5 +1,13 @@
 # Activiti Cloud Audit (MongoDB)
-[![Join Us in Gitter](https://badges.gitter.im/Activiti/Activiti7.svg)](https://gitter.im/Activiti/Activiti7?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status Travis](https://travis-ci.org/Activiti/activiti-cloud-audit-mongodb.svg?branch=master)](https://travis-ci.org/Activiti/activiti-cloud-audit-mongodb) [![Coverage Status](http://img.shields.io/codecov/c/github/Activiti/activiti-cloud-audit-mongodb/master.svg?maxAge=86400)](https://codecov.io/gh/Activiti/activiti-cloud-audit-mongodb) [![ASL 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/Activiti/activiti-cloud-audit-mongodb/blob/master/LICENSE.txt)  [![CLA](https://cla-assistant.io/readme/badge/Activiti/activiti-cloud-audit-mongodb)](https://cla-assistant.io/Activiti/activiti-cloud-audit-mongodb)  [![Docker Build Status](https://img.shields.io/docker/build/activiti/activiti-cloud-audit-mongodb.svg)](https://hub.docker.com/r/activiti/activiti-cloud-audit-mongodb/)
+
+[![Join Us in Gitter](https://badges.gitter.im/Activiti/Activiti7.svg)](https://gitter.im/Activiti/Activiti7?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status Travis](https://travis-ci.org/Activiti/activiti-cloud-audit-mongodb.svg?branch=master)](https://travis-ci.org/Activiti/activiti-cloud-audit-mongodb)
+[![Coverage Status](http://img.shields.io/codecov/c/github/Activiti/activiti-cloud-audit-mongodb/master.svg?maxAge=86400)](https://codecov.io/gh/Activiti/activiti-cloud-audit-mongodb)
+[![ASL 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/Activiti/activiti-cloud-audit-mongodb/blob/master/LICENSE.txt)  [![CLA](https://cla-assistant.io/readme/badge/Activiti/activiti-cloud-audit-mongodb)](https://cla-assistant.io/Activiti/activiti-cloud-audit-mongodb)
+[![Docker Build Status](https://img.shields.io/docker/build/activiti/activiti-cloud-audit-mongodb.svg)](https://hub.docker.com/r/activiti/activiti-cloud-audit-mongodb)
+[![Known Vulnerabilities](https://snyk.io/test/github/Activiti/activiti-cloud-audit-mongodb/badge.svg)](https://snyk.io/test/github/Activiti/activiti-cloud-audit-mongodb)
+[![security status](https://www.meterian.com/badge/gh/Activiti/activiti-cloud-audit-mongodb/security)](https://www.meterian.com/report/gh/Activiti/activiti-cloud-audit-mongodb)
+[![stability status](https://www.meterian.com/badge/gh/Activiti/activiti-cloud-audit-mongodb/stability)](https://www.meterian.com/report/gh/Activiti/activiti-cloud-audit-mongodb)
 
 Activiti Cloud Audit Service MongoDB Implementation. This service uses MongoDB Database to store events emitted by Runtime Bundles as they come in as JSON Documents.
 
